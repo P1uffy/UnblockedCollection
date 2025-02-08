@@ -1,0 +1,43 @@
+.inputName{
+	font-family: Empire9h;
+	border: none;
+	font-size: 30px;
+	outline: none;
+	
+}
+
+.link{
+	font-family: Empire9h;
+	border: none;
+	font-size: 2.5vh;
+	outline:none;
+	
+}
+.link:hover{
+	font-family: Empire9h;
+	border: none;
+	font-size: 2.5vh;
+	outline:none;
+	
+}
+
+.linkGame{
+	font-family: Empire9h;
+	border: none;
+	font-size: 2.5vh;
+	outline:none;
+	background:none;
+	
+}
+.linkGame:hover{
+	font-family: Empire9h;
+	border: none;
+	font-size: 2.5vh;
+	outline:none;
+	background:none;
+	
+}
+
+.button{
+	opacity:0;
+}
