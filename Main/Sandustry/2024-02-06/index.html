@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" style="background-color: #000;">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"> -->
+        <title>Sandustry Demo</title>
+        <style>
+            @keyframes ellipsis {
+                0% { content: ""; }
+                25% { content: "."; }
+                50% { content: ".."; }
+                75% { content: "..."; }
+            }
+            
+            .loading-text::after {
+                content: "";
+                animation: ellipsis 2s infinite steps(4);
+                display: inline-block;
+                width: 0;
+                margin-left: 0px;
+            }
+            
+            @keyframes gradientFlow {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+
+            .splash-screen {
+                width: 512px; 
+                position: absolute;
+                top: -256px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: none;
+            }
+
+        </style>
+    </head>
+<body>
+    <div id="loading" style="visibility: hidden; text-align: center; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); user-select: none;">
+        <div id="splash-screen" class="splash-screen">
+            <img src="img/lantto-games.png" alt="Lantto Games">
+        </div>
+        <div class="loading-text" style="font-size: 40px; color: #fff; margin-bottom: 10px;">Loading</div>
+        <div id="loading-step" style="font-size: 20px; color: #fff;">Please wait.</div>
+    </div>
+    <canvas id="background-canvas"></canvas>
+    <canvas id="canvas"></canvas>
+    <canvas id="overlay-canvas"></canvas>
+    <canvas id="foreground-canvas"></canvas>
+    <canvas id="minimap-obstacle" class="minimap"></canvas>
+    <canvas id="minimap-world" class="minimap"></canvas>
+    <div id="ui"></div>
+    <div id="fps" style="color: #00FF00; background-color: rgba(0, 0, 0, 0.5); padding: 4px 8px; position: fixed; top: 16px; right: 75px; user-select: none; display: none;">fps</div>
+    <script type="module" src="js/bundle.js"></script>
+</body>
+</html>

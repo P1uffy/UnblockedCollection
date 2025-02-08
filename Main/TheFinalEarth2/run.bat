@@ -1,0 +1,1 @@
+live-server --watch=js/pathfinder.js
